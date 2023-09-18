@@ -5,6 +5,8 @@ imports =
   [ 
     ./hardware-configuration.nix
   ];
+  
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 networking = {
   hostName = "calliopebailey";
@@ -16,8 +18,8 @@ networking = {
       67.225.240.211 ds2
       10.11.12.217 munchpi
       40.119.44.221 bi
-      67.225.188.48 integratedcomponentsinc.com
-      67.225.188.48 www.integratedcomponentsinc.com
+      67.225.188.48 mtte.pro
+      67.225.188.48 www.mtte.pro
     '';
 };
   
@@ -92,6 +94,7 @@ users.users.calliope = {
     pkgs.p7zip
     pkgs.direnv
     pkgs.zathura
+    pkgs.libreoffice
 
     pkgs.glibc_multi
     pkgs.glib-networking
@@ -102,19 +105,22 @@ users.users.calliope = {
   ];
 };
 
-environment.systemPackages = with pkgs; [
-  pkgs.st
-  gcc
-  gnumake
-  vim 
-  wget
-  git
-  helix
-  gcc
-  pkgs.barrier
-  pkgs.citrix_workspace
-  pkgs.hack-font
-];
+environment = {
+  variables.EDITOR = "hx";
+  systemPackages = with pkgs; [
+    pkgs.st
+    gcc
+    gnumake
+    vim 
+    wget
+    git
+    helix
+    gcc
+    pkgs.barrier
+    pkgs.citrix_workspace
+    pkgs.hack-font
+  ];
+};
 
 services.openssh.enable = true;
 
