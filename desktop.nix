@@ -37,6 +37,7 @@
       pkgs.direnv
       pkgs.zathura
       pkgs.libreoffice
+      pkgs.lsof
 
       pkgs.glibc_multi
       pkgs.glib-networking
