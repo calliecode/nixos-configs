@@ -35,8 +35,6 @@
       pkgs.xkcdpass
       pkgs.genpass
       pkgs.dig
-      pkgs.cargo
-      pkgs.rustc
       pkgs.stow
       pkgs.sshfs
       pkgs.newsboat
@@ -63,13 +61,12 @@
   environment = {
     variables.EDITOR = "hx";
     systemPackages = with pkgs; [
+      git
       pkgs.st
       gcc
       gnumake
       vim 
       wget
-      git
-      gcc
       pkgs.barrier
 #      pkgs.citrix_workspace
       pkgs.hack-font
