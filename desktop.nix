@@ -23,7 +23,7 @@
       tmux
       fzy
       neofetch
-      man
+      man-pages
       whois
       gimp
       pkgs.azuredatastudio
