@@ -26,6 +26,7 @@
       man-pages
       whois
       gimp
+      pkgs.mutt
       pkgs.azuredatastudio
       pkgs.nethack
       pkgs.lynx
